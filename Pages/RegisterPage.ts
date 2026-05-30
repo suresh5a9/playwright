@@ -25,10 +25,10 @@ export class register{
    this.confirmPassword=page.getByLabel('Confirm password:',{exact:true})
     }
 
-async openapp()
+async openapp(url:string)
 {
 
-    await this.page.goto('https://demo.nopcommerce.com/login')
+    await this.page.goto(url)
 }
 
   async registration(firstname:string , lastName:string, emai:string,company:string,password:string)
